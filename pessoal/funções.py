@@ -24,7 +24,7 @@ def primo(n):
             eprimo = False
     return eprimo
 lista50 = list(range(3,51))
-print('filter : ', list(filter(primo,lista50)))
+print('filter (primos de 3 a 50) :', list(filter(primo,lista50)))
 
 # list comprehension
 def eprimo(n):
@@ -35,6 +35,13 @@ def eprimo(n):
         if n%count == 0:
             eprimo = False
     return eprimo
-print('list comprehension : ', [x for x in range(3,51) if eprimo(x)])
+print('list comprehension (primos de 3 a 50) : ', [x for x in range(3,51) if eprimo(x)])
 # list comprehension (aninhada)
-print('list comprehension (aninhada) : ', [ x**2 for x in [x**2 for x in range(11)]])
+#print('list comprehension (aninhada) : ', [ x**2 for x in [x**2 for x in range(11)]])
+#print([x**4 for x in range(11)])
+[print('list comprehension (aninhada) : ', x) for x in [x**2 for x in range(11)]]
+
+#enumerate
+# [print('list comprehension (aninhada) : ', enumerate(x)) for x in [x**2 for x in range(11)]]
+lst = [x for x in [x**2 for x in range(11)]]
+print('enumerate : ',list(enumerate(lst)))
