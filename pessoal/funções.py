@@ -45,3 +45,5 @@ print('list comprehension (primos de 3 a 50) : ', [x for x in range(3,51) if epr
 # [print('list comprehension (aninhada) : ', enumerate(x)) for x in [x**2 for x in range(11)]]
 lst = [x for x in [x**2 for x in range(11)]]
 print('enumerate : ',list(enumerate(lst)))
+for indice, valor in enumerate(lst):
+    print('indicie : ', indice, '   valor : ', valor)
