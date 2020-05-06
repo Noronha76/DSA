@@ -21,3 +21,6 @@ def countdown(n):
     else:
         print(n)
         countdown(n-1)
+
+#<valor> = < x > if(True) else < y >
+xxxx     = 10    if(True) else   20
