@@ -19,7 +19,7 @@ base5 = '|   '
 base6 = '---'
 erros = 0
 palvara = 'estas serão as palavras de teste execforca felipe'.split()[random.randrange(7)]
-
+palvara = 'palavras' #ajudar no debug
 print('*' * len(palvara))
 #print(palvara) #ajudar no debug
 lst, lstFinal = [], []
@@ -56,6 +56,14 @@ while lstFinal.count('*') > 0:
             base5 += ' |'
         elif erros > 6:
             print('Game Over!')
+            base0 = '_____'
+            base1 = '|    |'
+            base2 = '|    |'
+            base3 = '|    O'
+            base4 = '|   |||'
+            base5 = '|    |'
+            base6 = '|   | |'
+            drawBase()
             break
         erros += 1
     drawBase()
