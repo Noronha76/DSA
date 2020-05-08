@@ -10,6 +10,36 @@ def drawBase():
     print(base5)
     print(base6)
 
+def drawErro(erros):
+    global base0
+    global base1
+    global base2
+    global base3
+    global base4
+    global base5
+    global base6
+    if erros == 0:
+        base2 += 'O'
+    elif erros == 1:
+        base3 += '|'
+    elif erros == 2:
+        base3 += '|'
+    elif erros == 3:
+        base3 += '|'
+    elif erros == 4:
+        base4 += '|'
+    elif erros == 5:
+        base5 += '|'
+    elif erros == 6:
+        base5 += ' |'
+    elif erros > 6:
+        print('Game Over!')
+        base2 = '|   _O_'
+        base3 = '|    |'
+        base4 = '|   _|_'
+        base5 = '|   '
+
+
 base0 = '_____'
 base1 = '|    |'
 base2 = '|    '
@@ -39,31 +69,9 @@ while lstFinal.count('*') > 0:
             print('You Win!')
             break
     else:
-        #drawErro(erros)
-        if erros == 0:
-            base2 += 'O'
-        elif erros == 1:
-            base3 += '|'
-        elif erros == 2:
-            base3 += '|'
-        elif erros == 3:
-            base3 += '|'
-        elif erros == 4:
-            base4 += '|'
-        elif erros == 5:
-            base5 += '|'
-        elif erros == 6:
-            base5 += ' |'
-        elif erros > 6:
-            print('Game Over!')
-            base0 = '_____'
-            base1 = '|    |'
-            base2 = '|    |'
-            base3 = '|    O'
-            base4 = '|   |||'
-            base5 = '|    |'
-            base6 = '|   | |'
-            drawBase()
+        drawErro(erros)
+        drawBase()
+        if erros > 6:
             break
         erros += 1
     drawBase()
