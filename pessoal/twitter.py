@@ -11,6 +11,18 @@ from pymongo import MongoClient
 import json
 
 # Adicione aqui sua Consumer Key
+#consumer_key = "xxxxxxxxx"
+
+# Adicione aqui sua Consumer Secret 
+#consumer_secret = "xxxxxxxxx"
+
+# Adicione aqui seu Access Token
+#access_token = "xxxxxxxxx"
+
+# Adicione aqui seu Access Token Secret
+#access_token_secret = "xxxxxxxxx"
+
+# Adicione aqui sua Consumer Key
 consumer_key = "xxxxxxxxx"
 
 # Adicione aqui sua Consumer Secret 
@@ -21,6 +33,7 @@ access_token = "xxxxxxxxx"
 
 # Adicione aqui seu Access Token Secret
 access_token_secret = "xxxxxxxxx"
+
 
 # Criando as chaves de autenticação
 auth = OAuthHandler(consumer_key, consumer_secret)
@@ -57,7 +70,7 @@ col = db.tweets
 ####################################
 # Criando uma lista de palavras chave para buscar nos Tweets
 ####################################
-keywords = ['Big Data', 'Python', 'Data Mining', 'Data Science']
+keywords = ['Bolsonaro', 'Mito', 'Bozo', 'Moro']
 
 ####################################
 # Coletando os Tweets
